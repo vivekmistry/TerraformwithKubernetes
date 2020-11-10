@@ -74,7 +74,7 @@ Deploy in Jenkins MasterSlave in Kubernetes(Minikube) using Terraform
 
     Go to the Terraform official website to download the latest version of Terraform:
 
-		VERSION=0.12.25
+		VERSION=0.13.5
 		sudo wget https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip -P /tmp
 		
     Now, Unzip the Terraform zip file into the directory /usr/local/bin/ as below:
