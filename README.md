@@ -88,33 +88,15 @@ Deploy in Jenkins MasterSlave in Kubernetes(Minikube) using Terraform
 		
 4. Write TerraForm File & DownLoad HelmChart:
 
-     Create one directory & terraform file:
+     Create one directory:
  
  		mkdir terraform && cd terraform
-		touch main.tf
 		
 		
-     DownLoad Jenkins Helm Chart. Note, the serviceType is set of "NodePort" for minikube & addition key-values "NodePort: 32320" is added in values.yaml file:
+     DownLoad Jenkins Helm Chart, Terraform file. Note, the serviceType is set of "NodePort" for minikube & addition key-values "NodePort: 32320" is added in values.yaml file:
 
-		git clone ***************.git
-		
-		
-     Edit Terraform File:
-     
-     		provider "kubernetes" {
-  		  config_context_cluster   = "minikube"
-		}
-		
-		resource "kubernetes_namespace" "minikube-namespace" {
-		  metadata {
-        		name = "terraform-namespace"
-		   }
-		}
-		
-		resource "helm_release" "local" {
-  		  name          = "jenkins"
-  		  chart         = "./jenkins"
-		}
+		git clone https://github.com/vivekmistry/TerraformwithKubernetes.git
+		unzip jenkins.zip
 
 5. Execute TerraForm File:
 
