@@ -93,9 +93,10 @@ Deploy in Jenkins MasterSlave in Kubernetes(Minikube) using Terraform
  		mkdir terraform && cd terraform
 		touch main.tf
 		
+		
      DownLoad Jenkins Helm Chart. Note, the serviceType is set of "NodePort" for minikube & addition key-values "NodePort: 32320" is added in values.yaml file:
 
-		git clone ***************
+		git clone ***************.git
 		
 		
      Edit Terraform File:
@@ -104,9 +105,9 @@ Deploy in Jenkins MasterSlave in Kubernetes(Minikube) using Terraform
   		  config_context_cluster   = "minikube"
 		}
 		
-		resource "kubernetes_namespace" "1-minikube-namespace" {
+		resource "kubernetes_namespace" "minikube-namespace" {
 		  metadata {
-        		name = "my-first-terraform-namespace"
+        		name = "terraform-namespace"
 		   }
 		}
 		
