@@ -34,4 +34,19 @@ Deploy in Jenkins MasterSlave in Kubernetes(Minikube) using Terraform
     Command to Check Installation Status:
     
           minikube status
+    
+2. Check Kubernetes Nodes, Pods and Cluster Details:
+
+    Configure Admin.conf file:
+
+          sudo cp /etc/kubernetes/admin.conf $HOME/
+          sudo chown $(id -u):$(id -g) $HOME/admin.conf
+          export KUBECONFIG=$HOME/admin.conf
+        
+    Health Check Commands:
+     
+         kubectl get nodes  
+	     kubectl get pods --all-namespaces
+	     kubectl cluster-info
+	     kubectl config get-contexts
         
